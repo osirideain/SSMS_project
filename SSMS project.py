@@ -21,9 +21,9 @@ def process(arg):
 
     def CreateTable():
         
-        hostname = "databrush1.savana-hosting.cz"
-        username = "dbtest"
-        password = "abc123."
+        hostname = ""
+        username = ""
+        password = ""
         ftp = ftplib.FTP(hostname,username,password)
         ftp.encoding = "utf-8"
 
@@ -532,7 +532,7 @@ def process(arg):
     def NewXML():
         
 
-        conn = pyodbc.connect('DRIVER={ODBC Driver 17 for SQL Server};SERVER=db-demo-server-123.database.windows.net;DATABASE=XML;UID=db_user;PWD=dataqual123!')
+        conn = pyodbc.connect('DRIVER={ODBC Driver 17 for SQL Server};SERVER=;DATABASE=XML;UID=;PWD=')
         mytree=ET.parse(user_xml)
         root=mytree.getroot()
         def GetItemID():
@@ -1318,7 +1318,7 @@ def process(arg):
     print("{} almost Completed".format(fileName_new))
 
     def tag3():
-        conn = pyodbc.connect('DRIVER={ODBC Driver 17 for SQL Server};SERVER=db-demo-server-123.database.windows.net;DATABASE=XML;UID=db_user;PWD=dataqual123!')
+        conn = pyodbc.connect('DRIVER={ODBC Driver 17 for SQL Server};SERVER=;DATABASE=XML;UID=;PWD=')
 
         def GetItemID():
             cursor = conn.cursor()
